@@ -1,20 +1,13 @@
 procedure main()
     local n1, proc1
-    write("What's your name?")
-    write("Hello " || read())
-    write()
 
     write("Testing first class procedures.")
-    write("Type an integer:")
+    write("Enter an integer:")
     n1 := integer(read()) | 3
     proc1 := passMe
     write("Assigned passMe to proc1 and called with your integer: " || proc1(n1))
-         write("Passed proc1 to passTo and passTo called it: " || passTo(n1, proc1))
+    write("Passed proc1 to passTo and passTo called it: " || passTo(n1, proc1))
     write("Returned passMe from retFrom and called it: " || retFrom(n1)(n1))
-    write()
-
-    ws()
-    write()
 end
 
 procedure passMe(arg1)
@@ -25,10 +18,4 @@ procedure passTo(arg1, proc1)
 end
 procedure retFrom(arg1)
     return passMe
-end
-
-procedure ws();  write("Newlines..."); write("are treated as followed by a semicolon...")
-    write("Unless escaped " || \
-    "with a backslash.")
-    write(    "But whitespace "||   "doesn't really matter.")
 end

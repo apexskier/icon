@@ -1,0 +1,5 @@
+procedure main();  write("Newlines..."); write("are treated as followed by a semicolon...")
+    write("Unless escaped " || \
+    "with a backslash.")
+    write(    "But whitespace "||   "doesn't really matter.")
+end
