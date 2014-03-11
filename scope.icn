@@ -1,0 +1,23 @@
+global var1
+
+procedure main()
+    var1 := "test1"
+
+    write("in main, var1 is ", var1)
+    proc1("test2")
+    write("var1 is still ", var1)
+    proc2("test3")
+    write("var1 is now ", var1)
+end
+
+procedure proc1(arg1)
+    # local var0 := "test0" # Error!
+    local var1
+    var1 := arg1
+    write("in proc1, var1 is ", var1)
+end
+
+procedure proc2(arg1)
+    var1 := arg1
+    write("in proc2, var1 is ", var1)
+end
